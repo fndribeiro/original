@@ -35,6 +35,7 @@ public final class PetService {
 			mapper.setNome(pet.getNome());
 			mapper.setSexoPet(pet.getSexoPet());
 			mapper.setTipoPet(pet.getTipoPet());
+			mapper.setImageUrl(pet.getImageUrl());
 			petRepository.save(mapper);
 			return ResponseEntity.ok().body(mapper);
 		}).orElseThrow(() -> new ResourceNotFoundException("Pet não encontrado com este id."));
