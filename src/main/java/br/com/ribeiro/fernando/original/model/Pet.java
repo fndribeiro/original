@@ -9,11 +9,14 @@ import javax.validation.constraints.Size;
 
 import com.sun.istack.NotNull;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Pet {
 
 	@Id
 	@GeneratedValue
+	@ApiModelProperty(hidden = true)
 	private long id;
 	
 	@NotNull
